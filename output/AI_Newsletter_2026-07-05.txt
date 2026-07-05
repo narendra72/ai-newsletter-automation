@@ -1,0 +1,257 @@
+AI WEEKLY #4 — THE AGE OF AGENTIC AI
+=====================================
+July 5, 2026 - Your weekly briefing on the AI stories, papers, tools,
+and takes that matter
+
+View in browser: ({{web_version_url}})
+
+-------------------------------------------------------------------------
+
+Hey there,
+
+If you've felt like every AI headline this week had the word "agent"
+in it, you're not imagining things. This week Anthropic shipped the
+most agentic Sonnet model yet, OpenAI answered with subagent-splitting
+GPT-5.6 Sol, X threw its firehose open to agents, and researchers
+dropped a brutal new benchmark showing just how far agents still have
+to go before they can be trusted with messy, real-world tools. We've
+got all of it below - plus the papers, repos, launches, and tweets
+worth your attention.
+
+Let's get into it.
+
+-------------------------------------------------------------------------
+
+BIG STORY OF THE WEEK
+----------------------
+
+Anthropic Launches Claude Sonnet 5, Its Most Agentic Model Yet -
+and Cheaper Than Opus
+
+Anthropic released Claude Sonnet 5 on June 30, calling it the most
+agentic Sonnet model to date: it can plan, use browsers and terminals,
+and run autonomously at a level that previously required much larger
+models. It launched as the default model for Free and Pro plans at
+introductory pricing of $2/$10 per million tokens (through August 31),
+undercutting Opus 4.8 while closing in on its performance on several
+agentic benchmarks - 63.2% vs. 69.2% on agentic coding, and 81.2% vs.
+83.4% on OSWorld-Verified.
+
+Why it matters: this is the clearest signal yet that the AI labs are
+no longer racing to be the "smartest" chatbot - they're racing to be
+the cheapest reliable agent.
+
+Read the full story:
+(https://www.anthropic.com/news/claude-sonnet-5?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+-------------------------------------------------------------------------
+
+QUICK UPDATES
+-------------
+
+- OpenAI's GPT-5.6 "Sol" Enters Preview as a Subagent-Splitting Model
+  OpenAI began previewing GPT-5.6 Sol, its most agentic model yet,
+  able to split work across subagents for longer autonomous tasks -
+  part of a broader pattern of every major lab shipping agentic
+  capability as table stakes.
+  (https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- X Opens Its Real-Time Firehose to AI Agents via MCP
+  X launched MCP servers letting AI assistants in Cursor, Claude
+  Desktop, and VS Code search its full archive, pull trends, manage
+  bookmarks, and draft posts directly from a user's account - no
+  custom integration needed.
+  (https://www.theaimarketers.ai/need-to-know-news-july-3rd-2026/?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Zuckerberg Tells Meta Staff AI Agent Progress Hasn't Accelerated
+  as Expected
+  At an internal town hall, Mark Zuckerberg reportedly told staff
+  that agent development hadn't sped up the way executives
+  anticipated, following ~8,000 layoffs earlier this year tied to
+  Meta's AI reorg.
+  (https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Anthropic's Fable 5 and Mythos 5 Return After Export Controls Lift
+  Following the U.S. Commerce Department's decision to lift export
+  controls that had suspended access since June 12, Anthropic
+  restored Fable 5 globally on July 1 and re-enabled Mythos 5 for
+  select organizations, alongside a new safety filter.
+  (https://www.anthropic.com/news?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- New Report: 88% of Organizations Hit an Agent-Related Security
+  Incident This Year
+  AvePoint's 2026 State of AI report found 46.9% of employees use
+  AI agents weekly or daily, while 88.4% of organizations
+  experienced at least one agent-related security incident -
+  adoption is clearly outpacing governance.
+  (https://aiagentstore.ai/ai-agent-news/this-week?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+-------------------------------------------------------------------------
+
+FEATURED RESEARCH PAPERS
+------------------------
+
+- PlanBench-XL: Evaluating Long-Horizon Planning of LLM Tool-Use
+  Agents in Large-Scale Tool Ecosystems
+  University of Illinois Urbana-Champaign - June 21, 2026
+  A brutal new benchmark for agents operating across 1,665 tools,
+  where they must discover the right tool, infer hidden sub-goals,
+  and cope with tools that silently fail or mislead. Even the best
+  model (Gemini-3.1-Pro) hit only 77% accuracy - most stayed under
+  60%, and disrupted tool paths knocked 20+ points off top models.
+  Possible Impact: agents' biggest weakness isn't finding tools -
+  it's recognizing when a tool has lied to them and recovering
+  gracefully.
+  Download the paper:
+  (https://arxiv.org/abs/2606.22388?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- SoK: Agentic Skills - Beyond Tool Use in LLM Agents
+  University of Technology Sydney & CSIRO Data61 - February 24, 2026
+  A comprehensive "systematization of knowledge" formalizing reusable
+  agentic skills - packaged procedures that stop agents from
+  re-deriving the same solution from scratch every time. Covers a
+  full skill lifecycle, seven design patterns, and a sobering case
+  study: a supply-chain attack that planted 1,184+ malicious skills
+  in a public registry.
+  Possible Impact: as "skills" become the default way to extend
+  agents, this is the field's first real security threat model for
+  them.
+  Download the paper:
+  (https://arxiv.org/abs/2602.20867?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data
+  UIUC & ETH Zurich - February 24, 2026
+  A self-play framework where a "Generator" invents progressively
+  harder tool-use tasks and a "Solver" learns to complete them - with
+  zero human-labeled data. Lifted a small Qwen2.5-1.5B model's
+  tool-calling accuracy by ~93% relative improvement, beating models
+  trained on tens of thousands of curated examples.
+  Possible Impact: a credible path to training capable agents
+  without expensive human-curated datasets.
+  Download the paper:
+  (https://arxiv.org/abs/2602.21320?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+-------------------------------------------------------------------------
+
+TOP GITHUB REPOS OF THE WEEK
+-----------------------------
+
+- langchain-ai/openwiki (~2,700 stars) - A CLI that auto-writes and
+  maintains agent-readable documentation for your codebase.
+  (https://github.com/langchain-ai/openwiki?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Kulaxyz/self-learning-skills (~825 stars) - A self-improving
+  "skill" for coding agents that captures a hard-won solution path
+  and reuses it later - a live example of this week's Agentic
+  Skills research in action.
+  (https://github.com/Kulaxyz/self-learning-skills?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- QwenLM/Qwen-AgentWorld (~760 stars) - Alibaba's "language world
+  models" giving agents a learned model of their environment for
+  better planning.
+  (https://github.com/QwenLM/Qwen-AgentWorld?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- benchflow-ai/awesome-evals (~660 stars) - A no-fluff curated
+  library of papers, tools, and benchmarks for building and
+  evaluating agents.
+  (https://github.com/benchflow-ai/awesome-evals?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- HKUDS/AgentSpace (~610 stars) - "Human + Agents, One Team, One
+  Workspace": humans and multiple agents collaborating in a shared
+  workspace.
+  (https://github.com/HKUDS/AgentSpace?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+Note: star counts are approximate totals since each repo's recent
+creation date, used as a proxy for this week's momentum.
+
+-------------------------------------------------------------------------
+
+TOP AI PRODUCTS OF THE WEEK
+----------------------------
+
+- Context.dev (~826 upvotes) - One agent-native API to scrape,
+  enrich, and understand the web - no scraping infrastructure
+  required.
+  (https://www.producthunt.com/products/context-dev?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Acti (~561 upvotes) - An agentic keyboard that runs mobile
+  commands and search right from where you're typing.
+  (https://www.producthunt.com/products/acti?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Humalike (~454 upvotes) - Gives AI agents the social intelligence
+  they're missing, so agent interactions feel less robotic.
+  (https://www.producthunt.com/products/humalike?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Tabstack (by Mozilla) (~380 upvotes) - Automate the web in your
+  app or agent with one API call, no browser to host.
+  (https://www.producthunt.com/products/tabstack?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- Sequence Agentic (~237 upvotes) - Money movement for AI agents -
+  a fintech API that lets agents initiate real payments.
+  (https://www.producthunt.com/products/sequence?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+Note: upvote counts approximate, from Product Hunt's July 2026 AI
+leaderboard as of July 5, 2026.
+
+-------------------------------------------------------------------------
+
+TOP AI TWEETS OF THE WEEK
+--------------------------
+
+- @claudeai
+  "Introducing Claude Sonnet 5, our most agentic Sonnet yet..." -
+  Anthropic's official announcement of Claude Sonnet 5 as its most
+  agentic Sonnet yet.
+  (https://x.com/claudeai/status/2072017450611142835?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- @karpathy
+  "...a computer security nightmare..." - on an experiment wiring
+  ~150,000 LLM agents into a shared, persistent scratchpad, calling
+  it unprecedented scale.
+  (https://x.com/karpathy/status/2017442712388309406?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- @sama
+  "...I believe in techno-capitalism..." - posted the same week he
+  proposed a US-led international forum for global AI safety
+  standards.
+  (https://x.com/sama/status/1941151234775511328?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- @yannlecun
+  "...AI sovereignty and the necessity of credible open/free
+  foundation models..." - from his UN Open Source Week keynote,
+  followed by a fireside chat on "Project Tapestry."
+  (https://www.threads.com/@yannlecun?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+- @OpenRouter
+  "...agents were more reliable, faster, and easier to trust with
+  larger tasks..." - community reaction as Claude Sonnet 5 rolled
+  out on OpenRouter.
+  (https://x.com/OpenRouter/status/2072020173872325088?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+Note: exact like/retweet counts weren't independently verifiable
+this week (no live X API access).
+
+-------------------------------------------------------------------------
+
+UNTIL NEXT WEEK
+----------------
+
+That's a wrap on this week's agentic AI deep-dive. If one theme ties
+it all together, it's this: the industry has stopped asking if
+agents will run our workflows and started arguing about how well -
+and how safely - they'll do it.
+
+See you next week.
+
+- AI Weekly
+
+Enjoyed this issue? Share this newsletter with a friend who's
+building with AI agents:
+({{web_version_url}}?utm_source=newsletter&utm_medium=email&utm_campaign=ai_weekly_2026-07-05)
+
+-------------------------------------------------------------------------
+
+You are receiving this email because you subscribed to AI Weekly.
+
+Unsubscribe: ({{unsubscribe_url}})
+{{sender_address}}
